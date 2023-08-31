@@ -27,7 +27,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
     super.initState();
 
     // After 2 seconds, show Greetings
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(milliseconds: 1500), () {
       if (!mounted) return; // Check if the widget is still mounted
       setState(() {
         showGreetings = true;
@@ -102,12 +102,14 @@ class Greetings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool myPasswordChangedText = context.watch<PageIndex>().passwordChangedText;
+
     return Center(
       child: Text(
-        _getGreeting(),
+        myPasswordChangedText ? "Password Changed Successfully" : _getGreeting(),
         style: TextStyle(
           color: Colors.white,
-          fontSize: 17.sp,
+          fontSize: 15.sp,
           fontWeight: FontWeight.w400,
         ),
         textAlign: TextAlign.center,

@@ -178,7 +178,7 @@ class ProfileSection extends StatelessWidget {
                                 Container(
                                   alignment: Alignment.centerLeft,
                                   child: Padding(
-                                    padding: EdgeInsets.only(left: 3.2.w, top: 2.5.h),
+                                    padding: EdgeInsets.only(left: 3.3.w, top: 2.5.h),
                                     child: Text('ID',
                                       style: TextStyle(
                                         color: primaryColor,

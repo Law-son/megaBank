@@ -6,12 +6,18 @@ class PageIndex with ChangeNotifier {
   bool _firstLoad = true;
   bool _loadingValid = true;
   int _pageIndex = 0;
+  bool _passwordChangedText = false;
 
   bool get homeSelected => _homeSelected;
   bool get transactionSelected => _transactionSelected;
   bool get firstLoad => _firstLoad;
   bool get loadingValid => _loadingValid;
   int get pageIndex => _pageIndex;
+  bool get passwordChangedText => _passwordChangedText;
+
+  void setPasswordChangedText() {
+    _passwordChangedText = true;
+  }
 
   void setFirstLoadTrue() {
     _firstLoad = true;

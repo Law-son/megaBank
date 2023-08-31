@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:megabank/constants.dart';
+import 'package:megabank/screens/profile/components/about_section.dart';
+import 'package:megabank/screens/profile/components/account_settings.dart';
 import 'package:megabank/screens/profile/components/profile_section.dart';
 import 'package:sizer/sizer.dart';
 
@@ -54,7 +56,9 @@ class _ProfileState extends State<Profile> {
         height: double.infinity,
         child: const Column(
           children: [
-            ProfileSection()
+            ProfileSection(),
+            AccountSettings(),
+            AboutSection()
           ],
         ),
       ),
